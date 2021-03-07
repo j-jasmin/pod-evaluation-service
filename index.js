@@ -13,9 +13,7 @@ watch.watch(
   },
   (type, pod) => {
     try {
-      ["ADDED", "MODIFIED"].includes(type)
-        ? evaluate(pod)
-        : console.log("unknown type: " + type);
+      if (["ADDED", "MODIFIED"].includes(type)) evaluate(pod);
     } catch (e) {
       console.error(e);
     }
