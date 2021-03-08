@@ -7,7 +7,7 @@ const evaluate = require("../evaluate");
 const expect = chai.expect;
 
 chai.use(factories);
-const pod = chai.create("failing");
+const pod = chai.create("passing");
 
 describe("Evaluate", () => {
   it("should log with pod and rule evaluation info", () => {

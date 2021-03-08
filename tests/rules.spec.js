@@ -4,7 +4,7 @@ const factories = require("chai-factories");
 // Require rules
 const hasImagePrefix = require("../rules/imagePrefix");
 const isLabelPresent = require("../rules/label");
-const isOlderThan = require("../rules/olderThan");
+const isOlderThan = require("../rules/age");
 
 const expect = chai.expect;
 
