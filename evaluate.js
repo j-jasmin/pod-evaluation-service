@@ -1,6 +1,6 @@
 const hasImagePrefix = require("./rules/imagePrefix");
 const isLabelPresent = require("./rules/label");
-const isOlderThan = require("./rules/olderThan");
+const isOlderThan = require("./rules/age");
 
 module.exports = (pod) => {
   const evaluationResults = {
@@ -8,15 +8,15 @@ module.exports = (pod) => {
     rule_evaluation: [
       {
         name: "image_prefix",
-        valid: hasImagePrefix(pod, "tfsdffest"),
+        valid: hasImagePrefix(pod),
       },
       {
         name: "team_label_present",
-        valid: isLabelPresent(pod, "jasminj000"),
+        valid: isLabelPresent(pod),
       },
       {
         name: "recent_start_time",
-        valid: isOlderThan(pod, 7),
+        valid: isOlderThan(pod),
       },
     ],
   };
