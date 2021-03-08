@@ -1,4 +1,4 @@
-module.exports = (pod, prefix) => {
+module.exports = (pod) => {
   const imagePrefix = pod.spec.containers[0].image.split("/")[0];
-  return imagePrefix.match(prefix) ? true : false;
+  return imagePrefix.match("bitnami") ? true : false;
 };
